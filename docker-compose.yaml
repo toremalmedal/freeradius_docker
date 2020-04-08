@@ -1,0 +1,11 @@
+version: '3.7'
+
+services:
+    freeradius:
+        image: freeradius/freeradius-server:latest
+        container_name: freeradius
+        volumes:
+            - /3.0:/etc/freeradius/3.0
+        ports:
+            - 1812:1812
+            - 1813:1813
